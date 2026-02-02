@@ -9,8 +9,10 @@ import {
   Zap,
   ShieldCheck,
   MessageSquare,
+  Mail,
   ChevronRight
 } from 'lucide-react';
+import Carousel from './components/Carousel';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,31 +59,27 @@ const Hero = () => (
       </div>
       <div style={{ flex: '1', minWidth: '300px', display: 'flex', justifyContent: 'center', position: 'relative' }}>
         {/* SVG Placeholder for Hero */}
-        <div className="glass" style={{ width: '100%', height: '400px', padding: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="glass" style={{ width: '100%', height: '400px', padding: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+          <img src="/hero-image.png" alt="Digital Abstract Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(45deg, rgba(255,153,0,0.1) 0%, transparent 100%)' }} />
-          <svg width="300" height="300" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="80" stroke="var(--aws-orange)" strokeWidth="2" strokeDasharray="10 5" opacity="0.3" />
-            <rect x="60" y="60" width="80" height="80" rx="12" stroke="white" strokeWidth="2" />
-            <path d="M40 100 L160 100" stroke="var(--aws-orange)" strokeWidth="1" opacity="0.2" />
-            <path d="M100 40 L100 160" stroke="var(--aws-orange)" strokeWidth="1" opacity="0.2" />
-            <circle cx="100" cy="100" r="4" fill="var(--aws-orange)" />
-            <path d="M80 85 L120 85" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            <path d="M80 100 L110 100" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            <path d="M80 115 L100 115" stroke="white" strokeWidth="2" strokeLinecap="round" />
-          </svg>
         </div>
       </div>
     </div>
   </section>
 );
 
-const ServiceCard = ({ icon: Icon, title, description }) => (
-  <div className="glass" style={{ padding: '2.5rem', transition: 'all 0.4s ease', cursor: 'default' }}>
-    <div style={{ background: 'rgba(255, 153, 0, 0.1)', width: '60px', height: '60px', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'var(--aws-orange)', marginBottom: '1.5rem' }}>
-      <Icon size={32} />
+const ServiceCard = ({ icon: Icon, title, description, image }) => (
+  <div className="glass" style={{ padding: 0, transition: 'all 0.4s ease', cursor: 'default', overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ height: '200px', width: '100%', overflow: 'hidden' }}>
+      <img src={image} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
     </div>
-    <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{title}</h3>
-    <p style={{ color: 'var(--text-secondary)' }}>{description}</p>
+    <div style={{ padding: '2.5rem' }}>
+      <div style={{ background: 'rgba(255, 153, 0, 0.1)', width: '60px', height: '60px', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'var(--aws-orange)', marginBottom: '1.5rem' }}>
+        <Icon size={32} />
+      </div>
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{title}</h3>
+      <p style={{ color: 'var(--text-secondary)' }}>{description}</p>
+    </div>
   </div>
 );
 
@@ -137,16 +135,19 @@ const App = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
               <ServiceCard
                 icon={Monitor}
+                image="/card-service-web.png"
                 title="Website Builder"
                 description="Custom, SEO-optimized, and high-conversion websites built with modern frameworks to tell your brand's story."
               />
               <ServiceCard
                 icon={Smartphone}
+                image="/card-service-app.png"
                 title="Custom Applications"
                 description="Native and cross-platform mobile apps focused on exceptional UI/UX and seamless performance."
               />
               <ServiceCard
                 icon={Settings}
+                image="/card-service-erp.png"
                 title="ERP Solutions"
                 description="Specialized ERPNext implementation and customization to streamline your business operations and data."
               />
@@ -188,20 +189,44 @@ const App = () => {
                   An Innovation Packaging System for robotic line, bottle, cup, pouch, and conveyor lines. We transformed their industrial presence with a state-of-the-art digital interface.
                 </p>
                 <div style={{ marginBottom: '2.5rem' }}>
-                  <div style={{ fontWeight: 600, marginBottom: '1rem' }}>Scope of Work:</div>
-                  <ul style={{ listStyle: 'none', opacity: 0.8 }}>
-                    <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><ChevronRight size={16} color="var(--aws-orange)" /> UI/UX Industrial Design</li>
-                    <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><ChevronRight size={16} color="var(--aws-orange)" /> Advanced Catalog System</li>
-                    <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><ChevronRight size={16} color="var(--aws-orange)" /> Multi-Platform Accessibility</li>
-                  </ul>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                    A comprehensive digital transformation ensuring efficiency and precision in industrial packaging.
+                  </p>
                 </div>
               </div>
               <div style={{ flex: '1', minWidth: '350px', background: 'rgba(255,255,255,0.02)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem' }}>
-                <div className="glass" style={{ width: '80%', height: '300px', transform: 'perspective(1000px) rotateY(-15deg)', boxShadow: '20px 20px 60px rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--aws-orange)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <div className="glass" style={{ width: '80%', height: '300px', transform: 'perspective(1000px) rotateY(-15deg)', boxShadow: '20px 20px 60px rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem' }}>
+                  <img src="/santo-logo-hq.png" alt="PT Santo Indonesia Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'brightness(100)' }} />
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+
+
+        <section id="service-showcase" style={{ padding: '4rem 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '3rem', marginBottom: '2rem', textAlign: 'center' }}>Service <span style={{ color: 'var(--aws-orange)' }}>Showcase</span></h2>
+            <Carousel
+              slides={[
+                {
+                  image: '/service-web.png',
+                  title: 'Next-Gen Web Builders',
+                  description: 'Empowering users with AI-driven, drag-and-drop website creation tools.'
+                },
+                {
+                  image: '/service-app.png',
+                  title: 'Immersive Mobile Experiences',
+                  description: 'Yoga & Wellness portals designed for serenity and seamless member engagement.'
+                },
+                {
+                  image: '/service-erp.png',
+                  title: 'Enterprise Intelligence',
+                  description: 'Robust ERPNext v16 implementations with advanced data visualization.'
+                }
+              ]}
+            />
           </div>
         </section>
 
@@ -211,16 +236,21 @@ const App = () => {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
               Let's build something extraordinary together. Whether it's a website, app, or ERP system, we have the tools and expertise.
             </p>
-            <a href="mailto:contact@samyastudio.com" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
-              <MessageSquare size={20} /> Contact Us
-            </a>
+            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="https://wa.me/628113078217" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem', background: '#25D366', borderColor: '#25D366' }}>
+                <MessageSquare size={20} /> WhatsApp
+              </a>
+              <a href="mailto:samya.studio.id@gmail.com" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                <Mail size={20} /> Email Us
+              </a>
+            </div>
             <div style={{ marginTop: '5rem', opacity: 0.5, fontSize: '0.8rem' }}>
               &copy; {new Date().getFullYear()} SAMYA STUDIO. All Rights Reserved.
             </div>
           </div>
         </footer>
       </main>
-    </div>
+    </div >
   );
 };
 
