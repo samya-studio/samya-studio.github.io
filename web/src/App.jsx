@@ -292,6 +292,11 @@ function App() {
                                         <span className="badge bg-secondary me-2">Full-Stack Expertise</span>
                                         <span className="badge bg-dark">Business Logic & ERP</span>
                                     </div>
+                                    <div className="mt-4">
+                                        <a href="https://www.linkedin.com/in/ianyulianto" target="_blank" rel="noreferrer" className="btn primary-btn">
+                                            <i className="lni lni-linkedin-original"></i> Connect on LinkedIn
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
