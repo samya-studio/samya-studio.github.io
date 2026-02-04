@@ -20,10 +20,10 @@ function App() {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <nav className="navbar navbar-expand-lg">
-                                        <a className="navbar-brand" href="#">
+                                        <Link className="navbar-brand" to="/">
                                             {/* <img src="/assets/images/white-logo.svg" alt="Logo" /> */}
                                             <h3 className="text-white">Samya <span style={{ color: '#FF9900' }}>Studio</span></h3>
-                                        </a>
+                                        </Link>
                                         <button
                                             className="navbar-toggler"
                                             type="button"
