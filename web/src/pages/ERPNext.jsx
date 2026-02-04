@@ -350,6 +350,7 @@ function ERPNext() {
                     <div className="row align-items-center py-4">
                         <div className="col-lg-4 col-12 text-center text-lg-start mb-3 mb-lg-0">
                             <h4 className="text-white mb-0">Samya <span style={{ color: '#FF9900' }}>Studio</span></h4>
+                            <p className="text-white mt-1" style={{ fontSize: '13px', opacity: 0.7 }}>IT Consultancy & Software Studio</p>
                         </div>
                         <div className="col-lg-4 col-12 text-center mb-3 mb-lg-0">
                             <div className="d-flex justify-content-center gap-3">
