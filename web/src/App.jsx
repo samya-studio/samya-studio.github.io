@@ -9,6 +9,15 @@ function App() {
         setIsNavOpen(!isNavOpen);
     };
 
+    const scrollToSection = (e, id) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsNavOpen(false); // close mobile menu after clicking
+        }
+    };
+
     return (
         <Routes>
             <Route path="/erpnext" element={<ERPNext />} />
@@ -38,19 +47,19 @@ function App() {
                                         <div className={`collapse navbar-collapse sub-menu-bar ${isNavOpen ? 'show' : ''}`} id="navbarNine">
                                             <ul className="navbar-nav me-auto">
                                                 <li className="nav-item">
-                                                    <a className="page-scroll active" href="#hero-area">Home</a>
+                                                    <a className="page-scroll active" href="#hero-area" onClick={(e) => scrollToSection(e, 'hero-area')}>Home</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#services">Services</a>
+                                                    <a className="page-scroll" href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#founder">Founder</a>
+                                                    <a className="page-scroll" href="#founder" onClick={(e) => scrollToSection(e, 'founder')}>Founder</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#projects">Projects</a>
+                                                    <a className="page-scroll" href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Projects</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#contact">Contact</a>
+                                                    <a className="page-scroll" href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
                                                 </li>
                                             </ul>
                                         </div>
