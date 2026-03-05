@@ -82,7 +82,7 @@ function App() {
                                     <div className="header-content">
                                         <h1>Where Craft meets Code. <br />We Build Quality Software.</h1>
                                         <p>
-                                            Samya Studio is a full-service IT Consultancy and Software Studio specializing in scalable web/mobile solutions and digital strategy.
+                                            Samya IT Studio is a full-service IT Consultancy and Software Studio specializing in scalable web/mobile solutions and digital strategy.
                                         </p>
                                         <div className="button">
                                             <a href="https://wa.me/628113078217?text=Hi%20Samya%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project" className="btn primary-btn" target="_blank" rel="noreferrer">
@@ -296,7 +296,7 @@ function App() {
                                         <h2 className="main-title fw-bold">Ian Yulianto</h2>
                                         <div className="about-five-tab">
                                             <p>
-                                                With over a decade of hands-on experience in the IT industry, Ian Yulianto founded Samya Studio with a singular mission: to bridge the gap between complex technology and business goals.
+                                                With over a decade of hands-on experience in the IT industry, Ian Yulianto founded Samya IT Studio with a singular mission: to bridge the gap between complex technology and business goals.
                                             </p>
                                             <p className="mt-3">
                                                 From navigating intricate enterprise systems to launching agile startup MVPs, Ian brings 10+ years of engineering leadership to every project. He combines deep technical expertise with a strong grasp of business logic and ERP systems.
@@ -410,7 +410,7 @@ function App() {
                                         <h6 className="text-white mb-2">Featured Client</h6>
                                         <h2 className="text-white mb-4">PT Santo Indonesia</h2>
                                         <p className="text-white">
-                                            "Samya Studio didn't just build our software; they understood our business. Their ability to translate our complex needs into a seamless digital experience was impressive. A true partner in our growth."
+                                            "Samya IT Studio didn't just build our software; they understood our business. Their ability to translate our complex needs into a seamless digital experience was impressive. A true partner in our growth."
                                         </p>
                                     </div>
                                 </div>
@@ -508,7 +508,7 @@ function App() {
                                 </div>
                                 <div className="col-lg-4 col-12 text-center text-lg-end">
                                     <p className="text-white mb-0" style={{ opacity: 0.7, fontSize: '14px' }}>
-                                        © 2026 Samya Studio. All Rights Reserved.
+                                        © 2026 Samya IT Studio. All Rights Reserved.
                                     </p>
                                 </div>
                             </div>

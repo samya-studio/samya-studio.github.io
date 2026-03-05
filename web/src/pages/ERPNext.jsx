@@ -273,7 +273,7 @@ function ERPNext() {
                             <div className="col-12">
                                 <div className="content">
                                     <h6>Proses Implementasi</h6>
-                                    <h2 className="fw-bold">Bagaimana Samya Studio Membantu</h2>
+                                    <h2 className="fw-bold">Bagaimana Samya IT Studio Membantu</h2>
                                     <p>
                                         Kami menyediakan layanan end-to-end untuk implementasi ERPNext yang sukses.
                                     </p>
@@ -367,7 +367,7 @@ function ERPNext() {
                         </div>
                         <div className="col-lg-4 col-12 text-center text-lg-end">
                             <p className="text-white mb-0" style={{ opacity: 0.7, fontSize: '14px' }}>
-                                © 2026 Samya Studio. All Rights Reserved.
+                                © 2026 Samya IT Studio. All Rights Reserved.
                             </p>
                         </div>
                     </div>
